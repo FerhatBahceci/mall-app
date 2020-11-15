@@ -1,0 +1,10 @@
+<div style="margin-top: 200px;position:absolute; margin-left: 150px">
+  <ul class="stores">
+    <li *ngFor="let storesGroupedBy of this.storeService.getGroupedByStoreType() | keyvalue"
+        [class.selected]="storesGroupedBy.key">
+      <a [routerLink]="['/stores', storesGroupedBy.key]">
+        <button>{{this.storeTypeTitleAndAmount(storesGroupedBy.key, this.storeService.getGroupedByStoreType())}}</button>
+      </a>
+    </li>
+  </ul>
+</div>

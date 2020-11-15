@@ -1,0 +1,8 @@
+<ul>
+    <li *ngFor="let store of stores"
+        [class.selected]="store.name">
+        <a [routerLink]="['/store', store.name]">
+            <button>{{store.name}}</button>
+        </a>
+    </li>
+</ul>
